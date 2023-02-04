@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intital-scale=1.0">
+    <title> TelescopicTour </title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ea8c584682.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="Home.html" class="Logo"> <img src="Img/telescopictour_logo_Crop-removebg-preview.png"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Shop.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="Img/Strars.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Img/Solar System 2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Img/CG Animation Of Astronauts In Space 3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="Img/Space Shuttle Launch 4.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Welcome.<br><span>TelescopicTour</span></h1>  
+            <p>TelescopicTour is an American aerospace company dedicated to revolutionizing the aerospace industry and making affordable spaceflight a reality. Our company was founded with the goal of making the excitement and wonder of space accessible to anyone with the desire to explore.</p>
+             
+        </div>
+        <div class="content">
+            <h1>About.<br><span>TelescopicTour</span></h1>
+            <p> Take a look behind the scenes with an all girls team and our purpose behind TelescopicTour. Whether you are a seasoned space enthusiast or just looking for a once-in-a-lifetime adventure, TelescopicTour has something for you. We invite you to join us on this incredible journey of discovery and exploration. </p>
+            <a href="About.html">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Shop.<br><span>TelescopicTour</span></h1>
+            <p> With TelescopicTour, you can choose from a variety of space-based travel packages, including suborbital “hot-air balloon” flights, rocket launches, and visits to the International Space Station. We are committed to ensuring the safety and comfort of all of our guests and have implemented rigorous training and safety protocols to ensure that every mission is a success. </p>
+            <a href="Shop.html">Shop</a>
+        </div>
+        <div class="content">
+            <h1>Contact.<br><span>TelescopicTour</span></h1>
+            <p> Need to get in touch with us? Either fill out the form with your inquiry or find the department email you'd like to contact below. </p>
+            <a href="Contact.html">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="https://m.facebook.com/?tbua=1"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/telescopictour/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        //Javacript of responsive navigation menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        //Javacript for video slider navtgation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+    <section class="footer">
+
+
+        <div class="box-container">
+    
+    
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Shop.html">Shop</a>
+            </div>
+    
+    
+            <div class="box">
+                <h3>Extra Links</h3>
+                <a href="Reference.html">Sources</a>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+            </div>
+    
+    
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">USA</a>
+                <a href="#">Moon</a>
+                <a href="#">Mars</a>
+                <a href="#">Earth</a>
+            </div>
+    
+    
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#">+123-456-7890</a>
+                <a href="#">TelescopicTour@gmail.com</a>
+                <a href="#">Miami, Florida - 400104</a>
+                <img src="ShopImg/payment.png" alt="">
+            </div>
+    
+    
+        </div>
+    
+    
+        <div class="credit"> created by <span> TelescopicTour </span> | All Rights Reserved </div>
+    
+    
+    </section>
+    
+</body>
+</html>
